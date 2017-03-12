@@ -2,5 +2,6 @@
 
 
 ## Factory and dependency injection 
-[here](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/README.md)
+
+Discussed [here](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/README.md).
 
