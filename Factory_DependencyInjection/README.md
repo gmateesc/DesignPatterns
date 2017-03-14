@@ -30,13 +30,13 @@ logic to the client and refering to the objects created by the factory
 using a uniform interface.
 
 We illustrate the factory pattern for the case of creating intances of two classes 
-that implement the ![MessageService](https://github.com/gmateesc/maven-projects/blob/master/DesignPatterns/src/gabriel/messaging/service/MessageService.java) interface. 
+that implement the ![MessageService](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/service/MessageService.java) application shows how the factory pattern enables creating objects of different subtypes of MessageService (EmailService and SMSService) using a uniform interface:
 
 
 <a name="p11" id="p11"></a>
 ### The service interface and its implementation 
 
-The ![MessageService](https://github.com/gmateesc/maven-projects/blob/master/DesignPatterns/src/gabriel/messaging/service/MessageService.java) interface is:
+The ![MessageService](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/service/MessageService.java) interface is:
 
 ```
 package gabriel.messaging.service;
