@@ -96,7 +96,7 @@ public class SMSService implements MessageService {
 <a name="p12" id="p12"></a>
 ## The MessageServiceFactory class
 
-The ![MessageServiceFactory](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/factorypattern/factory/MessageServiceFactory.java) creates objects for both classes that implemet the MessageService interface:
+The [MessageServiceFactory](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/factorypattern/factory/MessageServiceFactory.java) creates objects for both classes that implemet the MessageService interface:
 
 ```
 package gabriel.messaging.factorypattern.factory;
@@ -135,7 +135,7 @@ public class MessageServiceFactory {
 <a name="p13" id="p13"></a>
 ## Putting it together: the MessageServiceFactorypatternDemo application
 
-The sample ![MessageServiceFactorypatternDemo](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/depinjectpattern/demo/MessageServiceDepinjectpatternDemo.java) application shows how the factory pattern enables creating objects of different subtypes of MessageService (EmailService and SMSService) using a uniform interface:
+The sample [MessageServiceFactorypatternDemo](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/depinjectpattern/demo/MessageServiceDepinjectpatternDemo.java) application shows how the factory pattern enables creating objects of different subtypes of MessageService (EmailService and SMSService) using a uniform interface:
 
 
 ```
@@ -199,7 +199,7 @@ So  I will describe the following components:
 <a name="p21" id="p21"></a>
 ### The service interface and its implementation 
 
-Define a ![MessageService](https://github.com/gmateesc/maven-projects/tree/master/DesignPatterns/src/gabriel/messaging/service) interface:
+Define a [MessageService](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/service) interface:
 
 ```
 package gabriel.messaging.service;
@@ -214,9 +214,9 @@ public interface MessageService {
 
 Then create two implementations of this service interface: 
 
-* ![EmailService](https://github.com/gmateesc/maven-projects/blob/master/DesignPatterns/src/gabriel/messaging/service/EmailService.java) and 
+* [EmailService](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/service/EmailService.java) and 
 
-* ![SMSService](https://github.com/gmateesc/maven-projects/blob/master/DesignPatterns/src/gabriel/messaging/service/SMSService.java) 
+* [SMSService](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/service/SMSService.java) 
 
 
 The classes are:
@@ -279,7 +279,7 @@ Three components are used in dependency injection:
 #### The client class
 
 
-The class ![MessageClient](https://github.com/gmateesc/maven-projects/blob/master/DesignPatterns/src/gabriel/messaging/client/MessageClient.java) is used by applications to access an implementation of the MessageService interface. 
+The class [MessageClient](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/client/MessageClient.java) is used by applications to access an implementation of the MessageService interface. 
 
 ```
 package gabriel.messaging.client;
@@ -318,7 +318,7 @@ An application obtains an instance of the client class using an object of type
 injector class, where the inject class that implements the injector interface. 
 
 
-The injector interface ![MessageServiceInjector.java](https://github.com/gmateesc/maven-projects/blob/master/DesignPatterns/src/gabriel/messaging/depinjectpattern/injector/MessageServiceInjector.java) defines the method _getClient()_ that needs to be implemented by any injector class:
+The injector interface [MessageServiceInjector.java](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/depinjectpattern/injector/MessageServiceInjector.java) defines the method _getClient()_ that needs to be implemented by any injector class:
 
 ```
 package gabriel.messaging.depinjectpattern.injector;
@@ -332,7 +332,9 @@ public interface MessageServiceInjector {
 ```
 
 
-There are two injector classes, one for each MessageService class: ![EmailServiceInjector](https://github.com/gmateesc/maven-projects/blob/master/DesignPatterns/src/gabriel/messaging/depinjectpattern/injector/EmailServiceInjector.java) and ![SMSServiceInjector](https://github.com/gmateesc/maven-projects/blob/master/DesignPatterns/src/gabriel/messaging/depinjectpattern/injector/SMSServiceInjector.java). 
+There are two injector classes, one for each MessageService class: [EmailServiceInjector](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/depinjectpattern/injector/EmailServiceInjector.java) and [SMSServiceInjector](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/depinjectpattern/injector/SMSServiceInjector.java). 
+
+
 
 ```
 package gabriel.messaging.depinjectpattern.injector;
@@ -379,7 +381,7 @@ public class SMSServiceInjector implements MessageServiceInjector {
 
 Once we have defined the interfaces and classes described above, the application  will be easy to write. 
 
-The class ![MessageServiceDepinjectpatternDemo.java](https://github.com/gmateesc/maven-projects/blob/master/DesignPatterns/src/gabriel/messaging/depinjectpattern/demo/MessageServiceDepinjectpatternDemo.java) does the work in the _main()_ method:
+The class [MessageServiceDepinjectpatternDemo.java](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/depinjectpattern/demo/MessageServiceDepinjectpatternDemo.java) does the work in the _main()_ method:
 
 ```
 package gabriel.messaging.depinjectpattern.demo;
@@ -452,11 +454,12 @@ Here is the result of running the demo applications:
 
 ```
   $ ant 
-  Buildfile: /Users/gabriel/GitHub/maven-projects/DesignPatterns/build.xml
+  Buildfile: /Users/gabriel/GitHub/DesignPatterns/Factory_DependencyInjection/build.xml
 
   compile:
-    [mkdir] Created dir: /Users/gabriel/GitHub/maven-projects/DesignPatterns/classes
-    [javac] Compiling 10 source files to /Users/gabriel/GitHub/maven-projects/DesignPatterns/classes
+    [mkdir] Created dir: /Users/gabriel/GitHub/DesignPatterns/Factory_DependencyInjection/classes
+    [javac] Compiling 10 source files to 
+               /Users/gabriel/GitHub/DesignPatterns/Factory_DependencyInjection/classes
 
   demo_factory_pattern:
      [echo] 
