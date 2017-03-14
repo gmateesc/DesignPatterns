@@ -135,8 +135,7 @@ public class MessageServiceFactory {
 <a name="p13" id="p13"></a>
 ## Putting it together: the MessageServiceFactorypatternDemo application
 
-
-The sample ![MessageServiceFactorypatternDemo](https://github.com/gmateesc/maven-projects/blob/master/DesignPatterns/src/gabriel/messaging/factorypattern/demo/MessageServiceFactorypatternDemo.java) application shows how the factory pattern enables creating objects of different subtypes of MessageService (EmailService and SMSService) using a uniform interface:
+The sample ![MessageServiceFactorypatternDemo](https://github.com/gmateesc/DesignPatterns/blob/master/Factory_DependencyInjection/src/gabriel/messaging/depinjectpattern/demo/MessageServiceDepinjectpatternDemo.java) application shows how the factory pattern enables creating objects of different subtypes of MessageService (EmailService and SMSService) using a uniform interface:
 
 
 ```
